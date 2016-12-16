@@ -1,0 +1,35 @@
+﻿@model interview1.Models.represent
+
+@section TitleSection
+{
+    Books List | FG
+}
+@section StyleSection
+{
+    @Styles.Render("~/Content/booklistcss")
+}
+
+@section MainSection
+{
+    <div id="books">
+        <h2>Books List</h2>
+        <div class="container">
+            <div class="row">
+                <div class="section col-lg-12 col-md-12 col-xs-12 col-sm-12">
+                    @foreach(var r in Model.books)
+                    {
+                        if(r != null){
+                             <div class="listsection col-lg-4 col-md-4 col-xs-12 col-sm-4">
+                                 <a href="/books/detail/@r.BookId" class="bookname">@r.Name</a>
+                                       <p class="bookauthor"><span class="bold">Author :</span> @r.Author</p>
+                                        <p class="booklanguage"><span class="bold">Language :</span> @r.Language</p>
+                              </div>
+                        
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+    }

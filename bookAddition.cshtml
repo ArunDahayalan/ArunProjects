@@ -1,0 +1,81 @@
+﻿
+@{
+    var error="";
+    if(ViewBag.Error == "Error")
+    {
+         error = ViewBag.Error;
+    }
+    else
+    {
+        error = "form";
+    }
+}
+
+@section TitleSection
+{
+    Book Addition | FG
+}
+@section StyleSection
+{
+    @Styles.Render("~/Content/booklistcss")
+}
+@section MainSection
+{
+    @if(error == "form")
+    { 
+    <div id="books">
+        <h2>Book Addition</h2>
+        <div class="container">
+            <div class="row">
+                <div class="section col-lg-12 col-md-12 col-xs-12 col-sm-12">
+                    @using (Html.BeginForm(FormMethod.Post))
+                    {
+                        @Html.AntiForgeryToken()
+                        <div class="form-field">
+                            @Html.Label("Name*", new { @class = "content-small label-field" })
+                            <div class="form_textbox " tabindex="1">
+                                @Html.TextBox("Name", "", new { spellcheck = "false", @class = "form-control content-medium", maxlength = 60 })
+                            </div>
+                            <label id="validation-name" class="contactus-label content-small ">*Please enter book name</label>
+                            
+                        </div>
+                        <div class="form-field">
+                            @Html.Label("Author*", new { @class = "content-small label-field" })
+                            <div class="form_textbox " tabindex="1">
+                                @Html.TextBox("Author", "", new { spellcheck = "false", @class = "form-control content-medium", maxlength = 60 })
+                            </div>
+
+                            <label id="validation-name" class="contactus-label content-small ">*Please enter author name</label>
+                        </div>
+                        <div class="form-field">
+                            @Html.Label("Language*", new { @class = "content-small label-field" })
+                            <div class="form_textbox " tabindex="1">
+                                @Html.TextBox("Language", "", new { spellcheck = "false", @class = "form-control content-medium", maxlength = 60 })
+                            </div>
+                            <label id="validation-name" class="contactus-label content-small ">*Please enter book language</label>
+                           
+                        </div>
+                        <div class="form-field">
+                            @Html.Label("Number*", new { @class = "content-small label-field" })
+                            <div class="form_textbox " tabindex="1">
+                                @Html.TextBox("Number", "", new { spellcheck = "false", @class = "form-control content-medium", maxlength = 60 })
+                            </div>
+                            <label id="validation-name" class="contactus-label content-small ">*Please enter your book number</label>
+                        </div>
+                        <div class="form-field logon-field">
+                            <input type="submit" id="booksubmit" value="Submit" class="btn default-btn submit submit_link" />
+                        </div>
+                        
+                    }
+                  </div>
+                </div>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="error"><p>!Sorry an error occurred while proccess your request</p></div>
+    }
+
+}
+

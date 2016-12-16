@@ -1,0 +1,42 @@
+/****************Books List section****************/
+#books .listsection {
+  margin-bottom: 50px; }
+  #books .listsection a {
+    text-decoration: none; }
+  #books .listsection a:hover {
+    text-decoration: none; }
+  #books .listsection p {
+    margin: 5px 0; }
+  #books .listsection .bold {
+    font-weight: bold; }
+#books h2 {
+  text-align: center;
+  margin: 50px;
+  color: gray; }
+
+/****************end****************/
+/****************Books Addition section****************/
+#books .section .search {
+  background-color: blue;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer; }
+#books .section .form-field {
+  margin-bottom: 20px; }
+  #books .section .form-field label {
+    margin-bottom: 7px; }
+  #books .section .form-field #booksubmit {
+    background-color: blue;
+    color: white;
+    padding: 6px 10px;
+    width: 100%; }
+  #books .section .form-field #booksubmit:hover {
+    background-color: blueviolet; }
+  #books .section .form-field #validation-name {
+    color: red;
+    font-size: 12px; }
+
+/****************end****************/
+
+/*# sourceMappingURL=booklist.css.map */

@@ -1,0 +1,60 @@
+/****************Books List section****************/
+#books {
+    .listsection  {
+        margin-bottom:50px;
+        a{
+            text-decoration:none;
+        }
+        a:hover {
+            text-decoration:none;
+        }
+        p {
+             margin: 5px 0;
+        }
+        .bold {
+            font-weight:bold;
+        }
+    }
+    h2 {
+        text-align:center;
+        margin:50px;
+        color:gray;
+    }
+    
+}
+/****************end****************/
+/****************Books Addition section****************/
+
+#books {
+    .section  {
+        .search {
+                background-color: blue; 
+                color: white; 
+                padding: 10px;
+                border-radius: 5px;
+                cursor:pointer;
+            }
+        .form-field {
+            margin-bottom:20px;
+            label {
+                   margin-bottom: 7px;
+            }
+            #booksubmit {
+                background-color:blue;
+                color:white;
+                padding:6px 10px;
+                width:100%
+            }
+            #booksubmit:hover{
+                background-color:blueviolet;
+            }
+            #validation-name {
+                color:red;
+                font-size:12px
+            }
+            
+        }
+   }
+}
+
+/****************end****************/
